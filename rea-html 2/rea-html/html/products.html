@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Products</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="https://thumbs.dreamstime.com/z/online-store-icon-vector-design-illustration-modern-shopping-concept-e-commerce-marketplace-website-mobile-logo-symbol-221169452.jpg" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+
+
+    <style>
+      table, th, td {
+          border-style: solid;
+          border-color: black;
+      }
+
+      .header_section {
+        height: 100px; /* Set your desired height here */
+      }
+
+      body
+      {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .mySlides {display:none}
+
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.carousel-inner img {
+  width: 100%; /* Adjust width automatically to maintain aspect ratio */
+  max-height: 500px; /* Limit the height to make images smaller */
+  height: auto; /* Ensure the height adjusts based on the width to maintain the aspect ratio */
+  display: block; /* Display images as block elements to center them if necessary */
+  margin: 0 auto; /* Center images horizontally if they are smaller than the container */
+}
+
+.search-bar input[type="text"] {
+            border: none;
+            border-color:#b625e8;
+            padding: 10px;
+            width: 250px;
+            margin-left: 650px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .search-bar button {
+            border: none;
+            padding: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #7F00FF;
+            color: white;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #E100FF;
+        }
+        .mic-button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 1.5em;
+            vertical-align: middle;
+        }
+
+
+        .product-card {
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .card-body .btn-primary {
+            background-color: #7F00FF;
+            border-color: #7F00FF;
+        }
+        .card-body .btn-primary:hover {
+            background-color: #6e00e6;
+        }
+        .card-body .btn-success {
+            background-color: #E100FF;
+            border-color: #E100FF;
+        }
+        .card-body .btn-success:hover {
+            background-color: #c700eb;
+        }
+        .product-image {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures images cover the area nicely */
+        }
+        .category-dropdown {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: linear-gradient(to bottom, #b625e8 60%, #ffffff 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width:100%;
+        }
+
+        /* Styling for footer columns */
+        .footer-column {
+            width: 20%; /* Adjust the width as needed */
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            margin-right: 2%; /* Add margin between columns */
+            margin-bottom: 10px; /* Adjust the margin as needed */
+        }
+
+        /* Styling for links in the footer */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Additional styling for footer elements (e.g., buttons, icons) */
+        .footer-icon {
+            font-size: 24px; /* Adjust the font size as needed */
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Styling for the VirtuCart header */
+        .virtucart-header {
+            font-size: 36px; /* Adjust the font size as needed */
+            margin-bottom: 10px; /* Reduce the margin between VirtuCart and Useful Links */
+        }
+
+        /* Styling for the Follow Us section */
+        .follow-us-section {
+            text-align: right;
+            margin-right: 0; /* Remove the right margin to align Follow Us to the right */
+        }
+
+        /* Styling for the Contact Us section */
+        .contact-us-section {
+            text-align: left;
+            margin-left: 0; /* Remove the left margin to align Contact Us to the left */
+        }
+
+        .navbara {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.navbara a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.dropdowna {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdowna .dropbtna {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(200, 26, 189);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbara a:hover, .dropdowna:hover .dropbtna {
+  background-color: red;
+}
+
+.dropdown-contenta {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-contenta a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-contenta a:hover {
+  background-color: #ddd;
+}
+
+.dropdowna:hover .dropdown-contenta {
+  display: block;
+}
+
+#zz{
+    display: inline-block;
+}
+
+
+
+
+
+  </style>
+   </head>
+   <body>
+      <!--header section start -->
+      <!--header section start -->
+      <div class="header_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 col-lg-2">
+                    <div class="logo" style=" margin-left: 40px;margin-top:-3.0%!important;"><a style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:black;" href="index.html">VirtuCart</a></div>
+                </div> 
+                <div class="col-sm-6 col-lg-10">
+                    <div class="menu_text">
+                        <ul>
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="orders.html">Your Orders</a></li>
+                            <li><a href="#accessories">Categories</a></li>
+                            <li><a href="#footer">Contact Us</a></li>
+                            <li><a href="speechtotext.html"><img src="images/search-icon.png"></a></li>
+                            <li><div class="navbara">
+
+                                <div class="dropdowna">
+                                
+                                    <img id="zz" src="images/user-icon.png" alt="user" style="width: 30px; height: 30px";>
+                                    <div class="dropdown-contenta">
+                                      <a href="user.html">Details</a>
+                                      <a href="orders.html">Your Orders</a>
+                                      <a href="#">Log out</a>
+                                    </div>
+                                  </div> 
+                                </div></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+      <!-- header section end -->
+      <!-- banner section start -->
+      
+      <br><br>
+      <br><br>
+      <br><br>
+
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://fs.npstatic.com/userfiles/7687254/image/Best_Smartwatches_2023-w810h462.jpg" alt="Los Angeles" width="900" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="https://e.rpp-noticias.io/xlarge/2020/09/09/581958_994030.png" alt="Chicago" width="900" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.samsungsmartplaza.co.in/files/outlet/outlet_facebook_images/outlet_cover_photo/109650/16839_GSF_Banner_851x_390_jpg.jpg" alt="New York" width="900" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <br><br>
+
+
+      <div class="pop" style="text-align:center;">
+         <h1>Categories</h1>
+     </div>
+
+     <br><br>
+
+     <div class="search-bar">
+      <input type="text" placeholder="Search Items" id="searchInput" aria-label="Search">
+      <button type="button" class="btn btn-danger" onclick="searchProducts()">Search</button>
+      <!-- Microphone button for speech input -->
+      <button id="micButton" class="mic-button">🎤</button>
+  </div>
+  <br>
+  <br>
+  <br>
+  
+  <div class="container">
+      <div class="category-dropdown">
+          <select class="custom-select" id="categorySelect">
+              <option value="all">All Products</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Home Appliances">Home Appliances</option>
+              <option value="Kitchen Products">Kitchen Products</option>
+              <option value="Cosmetics">Cosmetics</option>
+              <!-- More categories can be added here -->
+          </select>
+      </div>
+
+      <div id="productsContainer" class="row">
+        <!-- Product cards will be dynamically inserted here -->
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Example array of product data - replace this with actual data
+    const products = [
+        { id: 1, name: 'iPhone 13 Pro', category: 'Electronics', price: 'Rs 1,25,999', image: 'https://www.financialexpress.com/wp-content/uploads/2021/09/iphone-13-pro-main.png' },
+        { id: 2, name: 'Samsung Galaxy S21', category: 'Electronics', price: 'Rs 99,999', image: 'https://i.gadgets360cdn.com/large/samsung_galaxy_s21_fe_press_images_winfuture_1639744846479.jpg' },
+        { id: 3, name: 'Sony WH-1000XM4 Headphones', category: 'Electronics', price: 'Rs 24,999', image: 'https://fdn.gsmarena.com/imgroot/news/20/09/sony-wh-1000xm3-review/-1200w2/gsmarena_005.jpg' },
+        { id: 4, name: 'Adidas Running Shoes', category: 'Clothing', price: 'Rs 7,999', image: 'https://believeintherun.com/wp-content/uploads/2023/03/adidas-solarglide-5-feature.jpg' },
+        { id: 5, name: 'Levi\'s 501 Original Jeans', category: 'Clothing', price: 'Rs 4,999', image: 'https://images.ctfassets.net/r7p9m4b1iqbp/2BYFSmGfy4wgDpMiMxoR8H/08033242e5a8a50c1808fdeac3a737c6/levis-plant-based-patch.jpg?w=1200&fm=webp&q=90' },
+        { id: 6, name: 'Ray-Ban Aviator Sunglasses', category: 'Accessories', price: 'Rs 10,999', image: 'https://5.imimg.com/data5/SELLER/Default/2020/10/DK/ZB/JS/26877817/rb8307-112-85.jpg' },
+        { id: 7, name: 'Fossil Gen 5 Smartwatch', category: 'Accessories', price: 'Rs 22,999', image: 'https://miro.medium.com/v2/resize:fit:1200/1*d1uWOLp4gli4VdUAhOLhnA.jpeg' },
+        { id: 8, name: 'Preethi Zodiac Mixer', category: 'Kitchen Products', price: 'Rs 9,500', image: 'https://nibz.in/images/listings/5e28b6e783d08332d77254c846bac6b6.jpg' },
+        { id: 9, name: 'Prestige Induction Stove', category: 'Kitchen Products', price: 'Rs 3,500', image: 'https://m.media-amazon.com/images/I/711rN+oMG2L.AC_UF894,1000_QL80.jpg' },
+        { id: 10, name: 'Whirlpool Refrigerator', category: 'Kitchen Products', price: 'Rs 36,999', image: 'https://i.gadgets360cdn.com/large/Facebook-Carousel-2-24082020Artboard_6_1601365669138.jpg' },
+        { id: 11, name: 'Ultra Perfect Grinder', category: 'Kitchen Products', price: 'Rs 9,000', image: 'https://images-cdn.ubuy.co.in/63569f65b888183d0a0a1c0a-ultra-perfect-table-top-2-liter-wet.jpg' },
+        { id: 12, name: 'Raymond Suits', category: 'Clothing', price: 'Rs 5,000', image: 'https://cdn0.weddingwire.in/vendor/3840/3_2/960/jpg/raym6_15_83840_v1.jpeg' },   
+        { id: 13, name: 'Tommy Hilfiger T Shirts', category: 'Clothing', price: 'Rs 2,500', image: 'https://i.ebayimg.com/images/g/YnQAAOSwmCpg4bnW/s-l1200.jpg' },   
+        { id: 14, name: 'Ponds Dreamflower Talc', category: 'Cosmetics', price: 'Rs 20', image: 'https://m.media-amazon.com/images/I/61FEAjystgL.jpg' },   
+        { id: 15, name: 'Lakme Lipstick', category: 'Cosmetics', price: 'Rs 750', image: 'https://www.lakmeindia.com/cdn/shop/products/nile_hero_600x.jpg?v=1680784859' },  
+        { id: 16, name: 'Dell XPS 13 Laptop', category: 'Electronics', price: 'Rs 1,49,999', image: 'https://media.wired.com/photos/5d531424bf8ec600088502a7/master/w_2560%2Cc_limit/Gear-DellXPS13-Review-LEAD.jpg' },
+        { id: 17, name: 'Nike Air Max Shoes', category: 'Clothing', price: 'Rs 8,499', image: 'https://airows.com/.image/t_share/MTI5MDAxNzk4MzgyOTcyODk4/nike-air-max-1-olympic-1.jpg' },
+        { id: 18, name: 'Apple Watch Series 7', category: 'Electronics', price: 'Rs 38,999', image: 'https://www.financialexpress.com/wp-content/uploads/2021/10/apple-watch-series-7-1.png' },
+
+// Add more products as needed...
+{ id: 19, name: 'Sony PlayStation 5', category: 'Electronics', price: 'Rs 49,999', image: 'https://fundamental.in/wp-content/uploads/2021/03/horizontal.jpg' },
+{ id: 20, name: 'LG OLED TV', category: 'Electronics', price: 'Rs 1,99,999', image: 'https://images.news18.com/ibnlive/uploads/2021/07/1626411235_lg-rollable-oled-tv-r-photos.jpg' },
+{ id: 21, name: 'Nike Dri-FIT T-shirt', category: 'Clothing', price: 'Rs 1,999', image: 'https://cdn.afew-store.com/assets/32/325822/1200/nike-wmns-essentials-solo-swoosh-tee-white-black-dh4255-100-apparel%20%3E%20t-shirts-manufacturers-1.jpg' },
+{ id: 22, name: 'Rolex Submariner Watch', category: 'Accessories', price: 'Rs 10,00,000', image: 'https://www.bobswatches.com/rolex-blog/wp-content/uploads/2020/05/Rolex_Submariner_5D3_9410-2-1.jpg' },
+{ id: 23, name: 'Canon EOS R5 Camera', category: 'Electronics', price: 'Rs 3,49,999', image: 'https://i.gadgets360cdn.com/large/canon_eos_r6_image_1594367111076.jpg' },
+{ id: 24, name: 'Adidas Superstar Sneakers', category: 'Clothing', price: 'Rs 6,999', image: 'https://juicestore.com/cdn/shop/articles/E4A0668-2_1200x.jpg?v=1623161820' },
+{ id: 25, name: 'Bose QuietComfort Earbuds', category: 'Electronics', price: 'Rs 24,999', image: 'https://images.news18.com/ibnlive/uploads/2020/09/1599813060_bose-quietcomfort-earbuds.jpg' },
+{ id: 26, name: 'Louis Vuitton Speedy Bag', category: 'Accessories', price: 'Rs 1,50,000', image: 'https://www.jillsconsignment.com/prodimages/lvpetitpalais11425.jpg' },
+{ id: 27, name: 'Samsung 85-inch QLED TV', category: 'Electronics', price: 'Rs 4,99,999', image: 'https://image-us.samsung.com/SamsungUS/home/television-home-theater/tvs/qled-4k-tvs/q80cd/QN50Q80CAFXZA_006_Front2_Titan-Black-1600x1200.jpg?$product-details-jpg$' },
+{ id: 28, name: 'Apple Homepod Mini', category: 'Accessories', price: 'Rs 9,999 ', image: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/homepod-mini-og-202110?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1632930650000' },
+{ id: 29, name: 'Versace Medusa Head Belt', category: 'Accessories', price: 'Rs 50,000', image: 'https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2019%2F07%2Fversace-medusa-crystal-embellished-belt-release-002.jpg?cbr=1&q=90' },
+{ id: 30, name: 'Canon EOS 5D Mark IV', category: 'Electronics', price: 'Rs 2,99,999', image: 'https://assets.newatlas.com/dims4/default/dd8eddd/2147483647/strip/true/crop/6042x4028+411+0/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fhands-on-canon-5d-iv-26.jpg' }
+
+      
+    ];
+
+    function renderProducts(products) {
+        const container = document.getElementById('productsContainer');
+        container.innerHTML = ''; // Clear previous contents
+        products.forEach(product => {
+            const productHTML = `
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="${product.image}" class="card-img-top product-image" alt="${product.name}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">${product.category}</p>
+                            <p class="price">${product.price}</p>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                            <a href="iphone.html"><button type="button" class="btn btn-success">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>`;
+            container.innerHTML += productHTML;
+        });
+    }
+
+    document.getElementById('categorySelect').addEventListener('change', function(e) {
+        const selectedCategory = e.target.value;
+        const filteredProducts = selectedCategory === 'all' 
+        
+        
+
+            ? products 
+            : products.filter(product => product.category === selectedCategory);
+        renderProducts(filteredProducts);
+    });
+
+    function searchProducts() {
+        const searchText = document.getElementById('searchInput').value.toLowerCase();
+        const filteredProducts = products.filter(product => 
+            product.name.toLowerCase().includes(searchText) ||
+            product.category.toLowerCase().includes(searchText));
+        renderProducts(filteredProducts);
+    }
+
+    renderProducts(products);
+    
+</script>
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const micButton = document.getElementById('micButton');
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'en-US';
+
+        micButton.addEventListener('click', () => {
+            micButton.classList.add('active');
+            recognition.start();
+        });
+
+        recognition.addEventListener('end', () => {
+            micButton.classList.remove('active');
+        });
+
+        recognition.addEventListener('result', (event) => {
+            const transcript = Array.from(event.results)
+                .map(result => result[0].transcript)
+                .join('');
+
+            searchInput.value = transcript;
+            searchProducts();
+        });
+    } else {
+        micButton.style.display = 'none';
+    }
+</script>
+<!-- last section start -->
+<footer id="footer">
+    <div class="footer-column">
+        <h3 class="virtucart-header">VirtuCart</h3>
+    </div>
+    <div class="footer-column">
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="orders.html">Your Orders</a></li>
+            <li><a href="index.html#accessories">Categories</a></li>
+
+        </ul>
+    </div>
+    <div class="footer-column contact-us-section">
+        <h3 style="margin-left:20px;">Contact Us</h3>
+        <p>Email:virtucart@gmail.com</p>
+        <p>Phone: 91+ 1020304050</p>
+
+    </div>
+    <div class="footer-column follow-us-section">
+        <h3 style="margin-right:10px;">Follow Us</h3>
+        <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+        </a>
+        <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i> <!-- Twitter icon -->
+        </a>
+        <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+        </a>
+    </div>
+</footer>
+  
+</body>
+</html>

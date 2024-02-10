@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      
+          <!-- basic -->
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <!-- mobile metas -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+          <!-- site metas -->
+          <title>VirtuCart</title>
+          <meta name="keywords" content="">
+          <meta name="description" content="">
+          <meta name="author" content="">
+          <!-- bootstrap css -->
+          <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+          <!-- style css -->
+          <link rel="stylesheet" type="text/css" href="css/style.css">
+          <!-- Responsive-->
+          <link rel="stylesheet" href="css/responsive.css">
+          <!-- fevicon -->
+          <link rel="icon" href="https://thumbs.dreamstime.com/z/online-store-icon-vector-design-illustration-modern-shopping-concept-e-commerce-marketplace-website-mobile-logo-symbol-221169452.jpg" type="image/gif" />
+          <!-- Scrollbar Custom CSS -->
+          <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+          <!-- Tweaks for older IEs-->
+          <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+          <!-- owl stylesheets --> 
+          <link rel="stylesheet" href="css/owl.carousel.min.css">
+          <link rel="stylesheet" href="css/owl.theme.default.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       
+
+    <style>
+      table, th, td {
+          border-style: solid;
+          border-color: black;
+      }
+
+      .card {
+          color: #f1f1f1;
+          background: linear-gradient(to bottom, #b625e8 60%, #ffffff 100%);
+          margin-bottom: 20px;
+          height: 300px;
+          max-width: 300px;
+          font-size: 1.5em;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          opacity: 1;
+          transform: translateY(0);
+          transition: opacity 0.5s, transform 0.5s;
+          transition: transform 0.5s ease-out;
+      }
+
+      .card img {
+          width: 100%;
+          height: 60%;
+          object-fit: cover;
+      }
+
+      .card-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          max-height: 40%;
+      }
+
+      .card-body h1,
+      .card-body h2 {
+          margin: 0;
+      }
+
+
+      .card:hover {
+          transform: scale(1.05);
+      }
+
+      .header_section {
+        height: 100px; /* Set your desired height here */
+      }
+
+      .pop {
+      font-size: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center; /* Add this line for center alignment */
+      
+   }
+
+   .w3-content1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+
+        .mySlides1 {
+            display: none;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+        }
+
+        .prev1,
+        .next1 {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .prev1 {
+            left: 0;
+        }
+
+        .next1 {
+            right: 0;
+        }
+
+        .card-container1 {
+        border: 4px solid #ddd; 
+        padding: 10px;
+    }
+
+        .w3-content2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+
+        .mySlides2, .mySlides3 {
+            display: none;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+        }
+
+        .prev2, 
+        .next2 {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .prev2  {
+            left: 0;
+        }
+
+        .next2 {
+            right: 0;
+        }
+
+        .card-container2 {
+        border: 4px solid #ddd;
+        padding: 10px;
+    }
+
+        .w3-content3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+
+        .mySlides3 {
+            display: none;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+        }
+
+        .prev3, 
+        .next3 {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .prev3  {
+            left: 0;
+        }
+
+        .next3 {
+            right: 0;
+        }
+
+        .card-container3 {
+        border: 4px solid #ddd;
+        padding: 10px;
+    }
+
+    .card-container4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap:10px;
+  padding: 10px; /* Add padding for better visual appeal */
+}
+
+.flip-card1 {
+  background-color: transparent;
+  width: 350px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.flip-card1-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card1:hover .flip-card1-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card1-front, .flip-card1-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flip-card1-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card1-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+div.gallery {
+  margin: 10px; /* Adjusted margin for better spacing */
+  border: 1px solid #ccc;
+  width: 220px; /* Increased width for larger cards */
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+footer {
+            background: linear-gradient(to bottom, #b625e8 60%, #ffffff 100%);
+            color: #fff;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Styling for footer columns */
+        .footer-column {
+            width: 20%; /* Adjust the width as needed */
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            margin-right: 2%; /* Add margin between columns */
+            margin-bottom: 10px; /* Adjust the margin as needed */
+        }
+
+        /* Styling for links in the footer */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Additional styling for footer elements (e.g., buttons, icons) */
+        .footer-icon {
+            font-size: 24px; /* Adjust the font size as needed */
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Styling for the VirtuCart header */
+        .virtucart-header {
+            font-size: 36px; /* Adjust the font size as needed */
+            margin-bottom: 10px; /* Reduce the margin between VirtuCart and Useful Links */
+        }
+
+        /* Styling for the Follow Us section */
+        .follow-us-section {
+            text-align: right;
+            margin-right: 0; /* Remove the right margin to align Follow Us to the right */
+        }
+
+        /* Styling for the Contact Us section */
+        .contact-us-section {
+            text-align: left;
+            margin-left: 0; /* Remove the left margin to align Contact Us to the left */
+        }
+
+
+        .navbara {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.navbara a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.dropdowna {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdowna .dropbtna {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(200, 26, 189);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbara a:hover, .dropdowna:hover .dropbtna {
+  background-color: red;
+}
+
+.dropdown-contenta {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-contenta a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-contenta a:hover {
+  background-color: #ddd;
+}
+
+.dropdowna:hover .dropdown-contenta {
+  display: block;
+}
+
+#zz{
+    display: inline-block;
+}
+
+  </style>
+   </head>
+   <body>
+      <!--header section start -->
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+             <div class="row">
+                 <div class="col-sm-6 col-lg-2">
+                     <div class="logo" style=" margin-left: 40px;margin-top:-3.0%!important;"><a style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:black;" href="index.html">VirtuCart</a></div>
+                 </div>
+                 <div class="col-sm-6 col-lg-10">
+                     <div class="menu_text">
+                         <ul>
+                             <li class="active"><a href="index.html">Home</a></li>
+                             <li><a href="about.html">About</a></li>
+                             <li><a href="products.html">Products</a></li>
+                             <li><a href="orders.html">Your Orders</a></li>
+                             <li><a href="#accessories">Categories</a></li>
+                             <li><a href="#footer">Contact Us</a></li>
+                             <li><a href="speechtotext.html"><img src="images/search-icon.png"></a></li>
+                             <li><div class="navbara">
+
+                                <div class="dropdowna">
+                              
+                                  <img id="zz" src="images/user-icon.png" alt="user" style="width: 30px; height: 30px";>
+                                  <div class="dropdown-contenta">
+                                    <a href="user.html">Details</a>
+                                    <a href="orders.html">Your Orders</a>
+                                    <a href="#">Log out</a>
+                                  </div>
+                                </div> 
+                              </div></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+      <!-- header section end -->
+      <!-- banner section start -->
+      <div class="banner_main">
+         <div id="my_Controls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="banner_section">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="banner_taital">
+                              <h2 class="our_text">New Releases</h2>
+                              <p class="standerd_text">Welcome to VirtuCart - Your Ultimate Shopping Destination!</p>
+                              <div class="red_bt" style="margin-top:20px;"><a href="#">Read More</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 ram">
+                           <div class="right_img"><img src="https://www.macworld.com/wp-content/uploads/2024/01/2023-Apple-Products-1.jpg?quality=50&strip=all"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="banner_section">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="banner_taital">
+                              <h2 class="our_text">Best Sellers</h2>
+                              <p class="standerd_text">We Sell Best Products at Best Price </p>
+                              <br>
+                              <div class="red_bt"><a href="#">Read More</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 ram">
+                           <div class="right_img"><img src="https://www.inventiva.co.in/wp-content/uploads/2023/02/cosmetics-jpeg.webp"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="carousel-item">
+                  <div class="banner_section">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="banner_taital">
+                              <h2 class="our_text">New Year Offer</h2>
+                              <p class="standerd_text">30% Flat Discount</p>
+                              <br>
+                              <div class="red_bt"><a href="#">Read More</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 ram">
+                           <div class="right_img"><img src="https://www.corewebvitals.io/static/img/resize-1200-800/s/head-vs-footer-js.webp"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            <a class="carousel-control-prev" href="#my_Controls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#my_Controls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="pop">
+         <h1>Today Offers</h1>
+     </div>
+     <br>
+     <br>
+      <div class="container">
+         <div class="row">
+             <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+                 <a href="storite.html"> 
+                     <div class="card fade-in">
+                         <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/0ff854c9-89f3-46ef-ab83-006fa7e54961.__CR0,0,4019,2486_PT0_SX970_V1___.jpg" class="card-img-top" alt="Card Image">
+                         <div class="card-body">
+                             <h1 class="card-title" style="font-size:18px;">Best Offers on Storite</h1>
+                             <h2 style="font-size:18px;" class="card-text">Up to 78% off</h2>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+ 
+             
+             <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+                 <a href="cookware.html"> 
+                     <div class="card fade-in">
+                         <img src="https://www.premierkitchen.in/wp-content/uploads/2021/05/7-Pcs-Set-2.jpg" class="card-img-top" alt="Card Image">
+                         <div class="card-body">
+                             <h1 class="card-title" style="font-size:18px;">Best Offers on Utensils</h1>
+                             <h2 style="font-size:18px;" class="card-text">Up to 53% off</h2>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+ 
+      
+ 
+             <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+                 <a href="shower.html"> 
+                     <div class="card fade-in">
+                         <img src="https://assets.kogan.com/images/zoestore/ZOE-H26685/1-594dfe5a03-h26685-1-4002-3hil.jpg?auto=webp&bg-color=fff&canvas=753%2C502&fit=bounds&height=502&quality=75&width=753" class="card-img-top" alt="Card Image">
+                         <div class="card-body">
+                             <h1 class="card-title" style="font-size:18px;">Offers on Water Showers</h1>
+                             <h2 style="font-size:18px;" class="card-text">Up to 33% off</h2>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+ 
+             <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+                 <a href="shoeasian.html"> 
+                     <div class="card fade-in">
+                         <img src="https://www.asianfootwears.com/cdn/shop/files/1_de1cc191-76ad-44e7-a461-7eb4f68fd057.jpg?v=1681044234" class="card-img-top" alt="Card Image">
+                         <div class="card-body">
+                             <h1 class="card-title" style="font-size:18px;">Super Offers on Asian</h1>
+                             <h2 style="font-size:18px;" class="card-text">Up to 52% off</h2>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+ 
+             <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+                 <a href="traveladapter.html"> 
+                     <div class="card fade-in">
+                         <img src="https://static-01.daraz.com.bd/p/d50bc2d624937cfae0ad5d68ab161228.jpg_750x400.jpg_.webp" class="card-img-top" alt="Card Image">
+                         <div class="card-body">
+                             <h1 class="card-title" style="font-size:18px;">Travel Adapters</h1>
+                             <h2 style="font-size:18px;" class="card-text">Up to 94% off</h2>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+             <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+                 <a href="destinio.html"> 
+                     <div class="card fade-in">
+                         <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/umbrella/1/l/s/40-ultra-lights-and-small-mini-umbrella-5-folding-compact-pocket-original-imagrfv3njvzdfuk.jpeg?q=90&crop=false" class="card-img-top" alt="Card Image">
+                         <div class="card-body">
+                             <h1 class="card-title" style="font-size:18px;">Destinio Travel Accessories</h1>
+                             <h2 style="font-size:18px;" class="card-text">Up to 64% off</h2>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+         </div>
+     </div>
+
+     <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+              <a href="shoef.html"> 
+                  <div class="card fade-in">
+                      <img src="https://cdn.khadims.com/image/tr:e-sharpen-01,h-822,w-940,cm-pad_resize/data/khadims/09-aug-2022/19151348340_1.jpg" class="card-img-top" alt="Card Image">
+                      <div class="card-body">
+                          <h1 class="card-title" style="font-size:18px;"> Offers on Men's Formal Shoes</h1>
+                          <h2 style="font-size:18px;" class="card-text">Up to 69% off</h2>
+                      </div>
+                  </div>
+              </a>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+              <a href="tshirt.html"> 
+                  <div class="card fade-in">
+                      <img src="https://www.siatex.com/wp-content/uploads/2023/07/T-shirt-Wholesale-Supplier-Virginia-USA.webp" class="card-img-top" alt="Card Image">
+                      <div class="card-body">
+                          <h1 class="card-title" style="font-size:18px;">Offers on T Shirts,Shorts,Vests,..</h1>
+                          <h2 style="font-size:18px;" class="card-text">Up to 63% off</h2>
+                      </div>
+                  </div>
+              </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+              <a href="wallet.html"> 
+                  <div class="card fade-in">
+                      <img src="https://i.etsystatic.com/35584235/r/il/ec17a4/3912571719/il_340x270.3912571719_9fk4.jpg" class="card-img-top" alt="Card Image">
+                      <div class="card-body">
+                          <h1 class="card-title" style="font-size:18px;">Best Offers on Wallets</h1>
+                          <h2 style="font-size:18px;" class="card-text">Up to 83% off</h2>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <br>
+          <br>
+          <br>
+         
+         <h1>Latest Updates</h1>
+         <br>
+         <br>
+
+          <div class="w3-content w3-section" data-aos="fade-up">
+            <img class="mySlides w3-animate-left" src="https://hogatoga.com/wp-content/uploads/2024/01/Samsung-Galaxy-S24-Series-hogatoga.jpg"  style="width:100%">
+            <img class="mySlides w3-animate-left" src="https://5.imimg.com/data5/GLADMIN/VideoImage/2023/7/322829516/AY/RN/TZ/192420121/front-load-washing-machine.jpg"  style="width:100%">
+            <img class="mySlides w3-animate-left" src="https://i.ytimg.com/vi/tkGphiphvuQ/maxresdefault.jpg"  style="width:100%">
+            <img class="mySlides w3-animate-left" src="https://i.ytimg.com/vi/nB45lqgJqLI/maxresdefault.jpg"  style="width:100%">
+            <img class="mySlides w3-animate-left" src="https://i.ytimg.com/vi/EWIit5G_SE0/maxresdefault.jpg"  style="width:100%">
+            <img class="mySlides w3-animate-left" src="https://cdn.mos.cms.futurecdn.net/9MRAS523vvfvNSocmbNb25.jpg"  style="width:100%">
+            <img class="mySlides w3-animate-left" src="https://www.themobileindian.com/wp-content/uploads/2023/12/BoAt-Nirvana-Ion-anc.jpg"  style="width:100%">
+            <img class="mySlides w3-animate-left" src="https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/06/Sony-Bravia-X82L.jpg?fit=1280%2C720&ssl=1"  style="width:100%">
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 3500);    
+            }
+         </script>
+       
+        <div class="pop"  style="text-align: center;">
+            <h1 id="accessories">Accessories</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="card-container1">
+        <div class="w3-content1 w3-display-container1">
+            <div class="mySlides1">
+                <img src="https://designreviews.com/wp-content/uploads/2021/oct-2021/airpods-3-vs-jabra-elite-7-pro-1024x623.jpg.webp" style="width:100%">
+            </div>
+            <div class="mySlides1">
+                <img src="https://m.media-amazon.com/images/I/31dxqKcCvSL._AC_UF1000,1000_QL80_.jpg" style="width:100%">
+            </div>
+            <div class="mySlides1">
+                <img src="https://www.dealsplant.com/cdn/shop/products/sandisk-usb-pen-drives-sandisk-16gb-cruzer-blade-usb-pendrive-11297185103947.jpg?v=1634774402" style="width:100%">
+            </div>
+            <div class="mySlides1">
+                <img src="https://cdn.thewirecutter.com/wp-content/media/2021/04/USBCcables-2021-2048px-4137.jpg?auto=webp&quality=75&width=1024" style="width:100%">
+            </div>
+            <div class="mySlides1">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHNldHxlbnwwfHwwfHx8MA%3D%3D" style="width:100%">
+            </div>
+            <div class="mySlides1">
+                <img src="https://www.apple.com/newsroom/images/product/watch/standard/Apple_watch-series7_hero_09142021_big.jpg.large.jpg" style="width:100%">
+            </div>
+            <div class="mySlides1">
+                <img src="https://leaguefeed.net/wp-content/uploads/2022/03/Razer-Cynosa-V2-Gaming-Keyboard-1024x623.jpg" style="width:100%">
+            </div>
+            <div class="mySlides1">
+                <img src="https://leaguefeed.net/wp-content/uploads/2022/03/ASUS-WiFi-6-Router-RT-AX3000-1024x623.jpg" style="width:100%">
+            </div>
+            <div class="mySlides1">
+                <img src="https://3.imimg.com/data3/EE/GQ/MY-12098417/random-access-memory.jpg" style="width:100%">
+            </div>
+            
+            <button class="w3-button w3-black prev1" onclick="plusDivs1(-3)">&#10094;</button>
+            <button class="w3-button w3-black next1" onclick="plusDivs1(3)">&#10095;</button>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+         
+          
+    <div class="pop" style="text-align: center;">
+        <h1>Best Offers on Kitchen Products</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="card-container2">
+    <div class="w3-content2 w3-display-container2">
+    <div class="mySlides2">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/358171015.jpg?k=4f175909c88ac0724c318f8c627f1345be9285efa590320460b10dd66ef54be4&o=&hp=1" style="width:100%">
+    </div>
+    <div class="mySlides2">
+        <img src="https://images.jdmagicbox.com/quickquotes/images_main/panasonic_mixer_grinder_mx_ac400b__11080520_0.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+        <img src="https://m.media-amazon.com/images/I/61eMAmZuVJL._AC_SL1500_.jpg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+        <img src="https://www.rasoishop.com/cdn/shop/products/Magic3burner_1024x.jpg?v=1624016042" style="width:100%">
+    </div>
+    <div class="mySlides2">
+        <img src="https://m.media-amazon.com/images/I/61CWHAFaWaL.jpg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+        <img src="https://doylestowngoldexchange.com/wp-content/uploads/2023/01/iStock-546178312-1024x623.jpg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+        <img src="https://t3.ftcdn.net/jpg/03/29/04/30/360_F_329043049_0QBp6UVYUwyxeAvibel3znLV0o9FfYcW.jpg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+        <img src="https://m.media-amazon.com/images/I/61dExxOXC9L._AC_UF894,1000_QL80_.jpg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+        <img src="https://www.furniture.ca/cdn/shop/products/KMBP107B_HC_02_1400x_6eeda6b8-2623-40af-8260-f579a7db535a_1400x.jpg?v=1569395841" style="width:100%">
+    </div>
+    
+    <button class="w3-button w3-black prev2" onclick="plusDivs2(-3)">&#10094;</button>
+    <button class="w3-button w3-black next2" onclick="plusDivs2(3)">&#10095;</button>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="pop" style="text-align: center;">
+    <h1>Offers on Clothings</h1>
+</div>
+<br>
+<br>
+<br>
+<div class="card-container3">
+<div class="w3-content3 w3-display-container3">
+<div class="mySlides3">
+    <img src="https://genxgamers.us/wp-content/uploads/2020/04/Bella-Canvas-Tri-blend-1024x623.png" style="width:100%">
+</div>
+<div class="mySlides3">
+    <img src="https://img.freepik.com/premium-photo/jeans-isolated-white-background_176402-7000.jpg?size=626&ext=jpg" style="width:100%">
+</div>
+<div class="mySlides3">
+    <img src="https://sarmaya.in/museum/wp-content/uploads/2019/10/Chettinad-Sarmaya-Travels6-1024x623.jpg" style="width:100%">
+</div>
+<div class="mySlides3">
+    <img src="https://5.imimg.com/data5/SELLER/Default/2022/10/PF/FX/DL/85557308/hd-cotton-pant-500x500.jpg" style="width:100%">
+</div>
+<div class="mySlides3">
+    <img src="https://c1.wallpaperflare.com/preview/141/340/937/shirts-social-shirts-clothing-men-s-shirts.jpg" style="width:100%">
+</div>
+<div class="mySlides3">
+    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/ethnic-set/h/j/h/xxl-mens-ethnic-p41-black-a-c-w-original-imagtxfms24nsvhc.jpeg?q=90" style="width:100%">
+</div>
+<br>
+<br>
+
+<button class="w3-button w3-black prev3" onclick="plusDivs3(-3)">&#10094;</button>
+<button class="w3-button w3-black next3" onclick="plusDivs3(3)">&#10095;</button>
+</div>
+</div>
+
+
+
+<script>
+    var slideIndex1 = 1;
+        showDivs1(slideIndex1);
+
+        function plusDivs1(n) {
+            showDivs1(slideIndex1 += n);
+        }
+
+        function showDivs1(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides1");
+            if (n > x.length) {
+                slideIndex1 = 1;
+            }
+            if (n < 1) {
+                slideIndex1 = x.length - 2;
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = slideIndex1 - 1; i < slideIndex1 + 2; i++) {
+                if (x[i]) {
+                    x[i].style.display = "block";
+                }
+            }
+        }
+
+        // Variables for Kitchen Products section
+        var slideIndex2 = 1;
+        showDivs2(slideIndex2);
+
+        function plusDivs2(n) {
+            showDivs2(slideIndex2 += n);
+        }
+
+        function showDivs2(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides2");
+            if (n > x.length) {
+                slideIndex2 = 1;
+            }
+            if (n < 1) {
+                slideIndex2 = x.length - 2;
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = slideIndex2 - 1; i < slideIndex2 + 2; i++) {
+                if (x[i]) {
+                    x[i].style.display = "block";
+                }
+            }
+        }
+
+
+        var slideIndex3 = 1;
+        showDivs3(slideIndex3);
+
+        function plusDivs3(n) {
+            showDivs3(slideIndex3 += n);
+        }
+
+        function showDivs3(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides3");
+            if (n > x.length) {
+                slideIndex3 = 1;
+            }
+            if (n < 1) {
+                slideIndex3 = x.length - 2;
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = slideIndex3 - 1; i < slideIndex3 + 2; i++) {
+                if (x[i]) {
+                    x[i].style.display = "block";
+                }
+            }
+        }
+
+        
+</script>
+
+<div class="pop" style="text-align: center;">
+    <h1>Surprise Offers</h1>
+</div>
+<br>
+<br>
+<div class="card-container4">
+    <!-- First Row -->
+    <div class="flip-card1">
+      <div class="flip-card1-inner">
+        <div class="flip-card1-front">
+          <img src="https://cdn.dxomark.com/wp-content/uploads/medias/post-116107/Featured-image_New.png" alt="Avatar" style="width:100%;height:100%;">
+        </div>
+        <div class="flip-card1-back">
+          <h1>Smartphones</h1> 
+          <p>Offers up to 60%</p> 
+        </div>
+      </div>
+    </div>
+  
+    <!-- Second Row -->
+    <div class="flip-card1">
+      <div class="flip-card1-inner">
+        <div class="flip-card1-front">
+          <img src="https://www.shutterstock.com/image-photo/beautiful-colorful-clothes-flying-isolatedwomens-600nw-2257875171.jpg" alt="Avatar" style="width:100%;height:100%;">
+        </div>
+        <div class="flip-card1-back">
+          <h1>Clothings</h1> 
+          <p>Monthly Offers Up to 30% </p> 
+        </div>
+      </div>
+    </div>
+  
+    <div class="flip-card1">
+      <div class="flip-card1-inner">
+        <div class="flip-card1-front">
+          <img src="https://thwartsystemsgh.com/images/Laptop_Computers/Computer-Accessories.jpg" alt="Avatar" style="width:100%;height:100%;">
+        </div>
+        <div class="flip-card1-back">
+          <h1>Accessories</h1> 
+          <p>Limited-time offer</p> 
+        </div>
+      </div>
+    </div>
+    
+    <div class="flip-card1">
+        <div class="flip-card1-inner">
+          <div class="flip-card1-front">
+            <img src="https://cdn.shopify.com/s/files/1/0997/6284/files/Watch_Colection_1024x1024.jpg?v=1654689385" alt="Avatar" style="width:100%;height:100%;">
+          </div>
+          <div class="flip-card1-back">
+            <h1>Smart Watches</h1> 
+            <p>Offers Up to 70% </p> 
+          </div>
+        </div>
+      </div>
+
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="pop" style="text-align: center;">
+    <h1>Lucky February</h1>
+</div>
+<br>
+<br>
+
+<div class="container2"> 
+    <div class="gallery">
+      <img src="https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/tile/Apple-iPhone-15-Pro-lineup-hero-230912.jpg.news_app_ed.jpg" alt="iphone15">
+      <div class="desc"> iPhone 15 From <br><strong>Rs. 67,499</strong></div>
+    </div>
+  
+    <div class="gallery">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2022/6/ZS/IT/NW/471473/hp-250-g8-15-fhd-core-i3-11th-gen-laptop-price-in-sri-sri-lanka-500x500.jpg" alt="laptop">
+      <div class="desc">Hp 250 i3 Core Laptop From <br><strong>Rs. 35,999</strong></div>
+    </div>
+  
+    <div class="gallery">
+      <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=900/app/images/products/sliding_image/524527a.jpg?ts=1687759096" alt="powerbank">
+      <div class="desc">Ambrane 10000 mAh Power Bank From <br><strong>Rs. 899</strong></div>
+    </div>
+  
+    <div class="gallery">
+      <img src="https://www.justcanon.in/cdn/shop/products/R8kq_500X700.jpg?v=1681994357" alt="camera">
+      <div class="desc">Canon EOS M50 Mark II Mirrorless Camera From<br><strong>Rs. 58,390</strong></div>
+    </div>
+
+    <div class="gallery">
+        <img src="https://i0.wp.com/www.tvsales.co.zw/wp-content/uploads/2023/01/Galaxy-tab-A8.png?fit=900%2C900&ssl=1" alt="tab">
+        <div class="desc">SAMSUNG Galaxy Tab A8 From <br><strong>Rs. 16,999</strong></div>
+      </div>
+
+      <div class="gallery">
+        <img src="https://s3.brownlee.com/product_photos/JPEG/7060-ON-900x900.jpg" alt="lights">
+        <div class="desc">Decor Lights Upto <br><strong>75% Offer</strong></div>
+      </div>
+
+      <div class="gallery">
+        <img src="https://5.imimg.com/data5/ANDROID/Default/2021/3/CN/VN/ZQ/28787916/product-jpeg.jpg" alt="garden">
+        <div class="desc">Garden Tools From<br><strong>Rs. 99</strong></div>
+      </div>
+
+      <div class="gallery">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/10/RC/XK/FK/159812030/dell-wm118-wireless-mouse-2-4-ghz-with-usb-nano-receiver-optical-tracking-black--500x500.jpg" alt="mouse">
+        <div class="desc">DELL WM118 Wireless Optical Mouse From <br><strong>Rs. 649</strong></div>
+      </div>
+
+  </div>
+</div>
+</div>
+
+<footer id="footer">
+    <div class="footer-column">
+        <h3 class="virtucart-header">VirtuCart</h3>
+    </div>
+    <div class="footer-column">
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="orders.html">Your Orders</a></li>
+            <li><a href="index.html#accessories">Categories</a></li>
+
+        </ul>
+    </div>
+    <div class="footer-column contact-us-section">
+        <h3 style="margin-left:20px;">Contact Us</h3>
+        <p>Email:virtucart@gmail.com</p>
+        <p>Phone: 91+ 1020304050</p>
+
+    </div>
+    <div class="footer-column follow-us-section">
+        <h3 style="margin-right:10px;">Follow Us</h3>
+        <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+        </a>
+        <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i> <!-- Twitter icon -->
+        </a>
+        <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+        </a>
+    </div>
+</footer>
+
+
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+            });
+            
+            $(".zoom").hover(function(){
+            
+            $(this).addClass('transition');
+            }, function(){
+            
+            $(this).removeClass('transition');
+            });
+            });
+            
+      </script> 
+      <script>
+         function openNav() {
+         document.getElementById("myNav").style.width = "100%";
+         }
+         
+         function closeNav() {
+         document.getElementById("myNav").style.width = "0%";
+         }
+
+
+
+         AOS.init({
+        duration: 1000,
+        offset: 100, 
+        easing: 'ease-out', 
+    });
+       
+        document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        const elements = document.querySelectorAll('.card');
+        elements.forEach(element => observer.observe(element));
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll(".fade-in").forEach((card) => {
+      observer.observe(card);
+    });
+  });
+         
+
+      </script>
+   </body>
+</html>
