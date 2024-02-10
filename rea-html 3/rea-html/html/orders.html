@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>Your Orders</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="https://thumbs.dreamstime.com/z/online-store-icon-vector-design-illustration-modern-shopping-concept-e-commerce-marketplace-website-mobile-logo-symbol-221169452.jpg" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- owl stylesheets --> 
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
+    <style>
+        .product-card {
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .card-body .btn-primary {
+            background-color: #7F00FF;
+            border-color: #7F00FF;
+        }
+        .card-body .btn-primary:hover {
+            background-color: #6e00e6;
+        }
+        .card-body .btn-success {
+            background-color: #E100FF;
+            border-color: #E100FF;
+        }
+        .card-body .btn-success:hover {
+            background-color: #c700eb;
+        }
+        .product-image {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures images cover the area nicely */
+        }
+        .category-dropdown {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: linear-gradient(to bottom, #b625e8 60%, #ffffff 100%);
+            color: #fff;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Styling for footer columns */
+        .footer-column {
+            width: 20%; /* Adjust the width as needed */
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            margin-right: 2%; /* Add margin between columns */
+            margin-bottom: 10px; /* Adjust the margin as needed */
+        }
+
+        /* Styling for links in the footer */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Additional styling for footer elements (e.g., buttons, icons) */
+        .footer-icon {
+            font-size: 24px; /* Adjust the font size as needed */
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Styling for the VirtuCart header */
+        .virtucart-header {
+            font-size: 36px; /* Adjust the font size as needed */
+            margin-bottom: 10px; /* Reduce the margin between VirtuCart and Useful Links */
+        }
+
+        /* Styling for the Follow Us section */
+        .follow-us-section {
+            text-align: right;
+            margin-right: 0; /* Remove the right margin to align Follow Us to the right */
+        }
+
+        /* Styling for the Contact Us section */
+        .contact-us-section {
+            text-align: left;
+            margin-left: 0; /* Remove the left margin to align Contact Us to the left */
+        }
+
+        .navbara {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.navbara a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.dropdowna {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdowna .dropbtna {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(200, 26, 189);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbara a:hover, .dropdowna:hover .dropbtna {
+  background-color: red;
+}
+
+.dropdown-contenta {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-contenta a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-contenta a:hover {
+  background-color: #ddd;
+}
+
+.dropdowna:hover .dropdown-contenta {
+  display: block;
+}
+
+#zz{
+    display: inline-block;
+}
+
+
+  </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="header_section" style="height:100px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 col-lg-2">
+                    <div class="logo" style="margin-left: 40px;margin-top:-3.0%!important;">
+                        <a style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:black;" href="index.html">VirtuCart</a>
+                    </div>
+                </div> 
+                <div class="col-sm-6 col-lg-10">
+                    <div class="menu_text">
+                        <ul>
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="orders.html">Your Orders</a></li>
+                            <li><a href="#accessories">Categories</a></li>
+                            <li><a href="#footer">Contact Us</a></li>
+                            <li><a href="speechtotext.html"><img src="images/search-icon.png"></a></li>
+                            <li><div class="navbara">
+
+                                <div class="dropdowna">
+                                
+                                    <img id="zz" src="images/user-icon.png" alt="user" style="width: 30px; height: 30px";>
+                                    <div class="dropdown-contenta">
+                                      <a href="user.html">Details</a>
+                                      <a href="orders.html">Your Orders</a>
+                                      <a href="#">Log out</a>
+                                    </div>
+                                  </div> 
+                                </div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- End of Navigation bar -->
+
+    <!-- Your Orders section -->
+    <div class="container mt-5">
+        <h1>Your Orders</h1>
+        <div class="row">
+            <!-- Example order card -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="https://www.financialexpress.com/wp-content/uploads/2021/09/iphone-13-pro-main.png" class="card-img-top product-image" alt="iPhone 13 Pro">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">iPhone 13 Pro</h5>
+                        <p class="card-text">Category: Electronics</p>
+                        <p class="price">Price: Rs 1,25,999</p>
+                        <p class="delivery">Estimated Delivery: 10th Feb 2024</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Order card for Adidas running shoes -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="https://believeintherun.com/wp-content/uploads/2023/03/adidas-solarglide-5-feature.jpg" class="card-img-top product-image" alt="Adidas Running Shoes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Adidas Running Shoes</h5>
+                        <p class="card-text">Category: Clothing</p>
+                        <p class="price">Price: Rs 7,999</p>
+                        <p class="delivery">Estimated Delivery: 15th March 2024</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Order card for Ray-Ban Aviator sunglasses -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/DK/ZB/JS/26877817/rb8307-112-85.jpg" class="card-img-top product-image" alt="Ray-Ban Aviator Sunglasses">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ray-Ban Aviator Sunglasses</h5>
+                        <p class="card-text">Category: Accessories</p>
+                        <p class="price">Price: Rs 10,999</p>
+                        <p class="delivery">Estimated Delivery: 20th March 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Your Orders section -->
+
+    <footer id="footer">
+        <div class="footer-column">
+            <h3 class="virtucart-header">VirtuCart</h3>
+        </div>
+        <div class="footer-column">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="orders.html">Your Orders</a></li>
+                <li><a href="index.html#accessories">Categories</a></li>
+    
+            </ul>
+        </div>
+        <div class="footer-column contact-us-section">
+            <h3 style="margin-left:20px;">Contact Us</h3>
+            <p>Email:virtucart@gmail.com</p>
+            <p>Phone: 91+ 1020304050</p>
+    
+        </div>
+        <div class="footer-column follow-us-section">
+            <h3 style="margin-right:10px;">Follow Us</h3>
+            <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+            </a>
+            <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter"></i> <!-- Twitter icon -->
+            </a>
+            <a href="#" class="footer-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+            </a>
+        </div>
+    </footer>
+    
+    
+
+
+    <!-- Include scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
