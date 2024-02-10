@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Shirt Try-On</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #video-container {
+            position: relative;
+            width: 840px;
+            height: 680px;
+            align-items: center;
+            text-align: center;
+            display: block;
+            margin: auto;
+        }
+
+        #video, #shirt-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #video {
+            width: 100%;
+            height: auto;
+        }
+
+        #shirt-image {
+            width: 100px; /* Adjust width for visibility */
+            height: auto; /* Maintain aspect ratio */
+            border: none; /* Add border for visibility */
+        }
+
+        .desc {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <br><br>
+    <div id="video-container">
+        <video id="video" width="840" height="680" autoplay></video>
+        <img id="shirt-image" src="isolated-black-t-shirt-front-free-png.webp" alt="Shirt">
+    </div>
+
+    <br><br>
+
+    <h1 class="desc">This product suits you well!</h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <script>
+        
+        async function startVirtualTryOn() {
+    const video = document.getElementById('video');
+    const shirtImage = document.getElementById('shirt-image');
+
+    // Load posenet model
+    const net = await posenet.load({
+        architecture: 'ResNet50',
+        outputStride: 32,
+        inputResolution: 257,
+        quantBytes: 2
+    });
+
+    // Access webcam
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+    video.srcObject = stream;
+
+    // Wait for the video to be loaded
+    await new Promise(resolve => {
+        video.onloadedmetadata = () => {
+            resolve();
+        };
+    });
+
+    // Detect poses in real-time
+    setInterval(async () => {
+        const pose = await net.estimateSinglePose(video, {
+            flipHorizontal: false
+        });
+
+        // Overlay shirt image based on detected pose
+        if (pose.keypoints.length > 0) {
+            const leftShoulder = pose.keypoints.find(k => k.part === 'leftShoulder');
+            const rightShoulder = pose.keypoints.find(k => k.part === 'rightShoulder');
+            const leftHip = pose.keypoints.find(k => k.part === 'leftHip');
+            const rightHip = pose.keypoints.find(k => k.part === 'rightHip');
+
+            if (leftShoulder && rightShoulder && leftHip && rightHip) {
+                // Calculate shoulder-to-hip distance
+                const shoulderToHipDistance = Math.max(
+                    leftShoulder.position.y - leftHip.position.y,
+                    rightShoulder.position.y - rightHip.position.y
+                );
+
+                // Calculate shoulder width
+                const shoulderWidth = rightShoulder.position.x - leftShoulder.position.x;
+
+                // Adjust shirt scale based on shoulder width and desired shirt size
+                const desiredShirtWidth = 3.2 * shoulderWidth; // Enlarge the shirt by 1.5 times the shoulder width
+                const desiredShirtHeight = 1.5 * shoulderToHipDistance; // Extend the shirt by 1.5 times the shoulder-to-hip distance
+                const scaleFactorWidth = desiredShirtWidth / shirtImage.offsetWidth;
+                const scaleFactorHeight = desiredShirtHeight / shirtImage.offsetHeight;
+                shirtImage.style.transform = `scale(${scaleFactorWidth}, ${scaleFactorHeight})`;
+
+                // Calculate rotation angle
+                const angle = Math.atan2(rightShoulder.position.y - leftShoulder.position.y, rightShoulder.position.x - leftShoulder.position.x);
+                shirtImage.style.transform += ` rotate(${angle}rad)`;
+
+                // Adjust shirt position
+                const centerX = (leftShoulder.position.x + rightShoulder.position.x) / 2;
+                const centerY = (leftShoulder.position.y + rightShoulder.position.y) / 2;
+                const offsetY = 100; // Adjust this value as needed
+                shirtImage.style.left = `${centerX - shirtImage.offsetWidth / 2}px`;
+                shirtImage.style.top = `${centerY - shirtImage.offsetHeight / 2 + offsetY}px`;
+
+                // Make shirt image visible and more transparent to blend with video feed
+                shirtImage.style.display = 'block';
+                shirtImage.style.opacity = '0.9';
+            }
+        }
+    }, 100);
+}
+
+startVirtualTryOn();
+
+
+
+    </script>
+</body>
+</html>
